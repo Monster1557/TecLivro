@@ -3,6 +3,21 @@
 My profile page CSS
 ================================================
 */
+@media only screen and (min-width:769px) and (max-width:1024px){
+  
+}
+
+/* Tablet (Em pé)*/
+@media only screen and (min-width:581px) and (max-width:768px){
+  
+}
+
+/* Phone (Deitado)*/
+@media only screen and (min-width:321px) and (max-width:580px){
+
+
+}
+
 @media only screen and (min-width:320px){
 
   .dropbtn {
