@@ -1,0 +1,387 @@
+/* 
+================================================
+My profile page CSS
+================================================
+*/
+@media only screen and (min-width:320px){
+
+  .dropbtn {
+    background-color: #f1f1f1;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #f2f2f2;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+  .col-3{
+    width: 100%;
+  
+  }
+    
+  nav{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: #f1f1f1;
+    height: 48px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    box-shadow: 0px 1px 9px 0px rgba(60, 134, 53, 0.2);
+  }
+
+  .align-center{
+    align-content: center;
+  }
+  
+    /* Profile container */
+    .profile {
+      margin: px 0;
+    }
+    
+    /* Profile sidebar */
+    .profile-sidebar {
+      margin-top: 35px;
+      padding: 0px 0 10px 0;
+      background: #fff;
+    }
+    
+    .profile-userpic img {
+      float: none;
+      margin: 0 auto;
+      -webkit-border-radius: 50% !important;
+      -moz-border-radius: 50% !important;
+      border-radius: 50% !important;
+    }
+    
+    .profile-usertitle {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .profile-usertitle-name {
+      color: #5a7391;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+    
+    .profile-usertitle-job {
+      text-transform: uppercase;
+      color: #5b9bd1;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .profile-userbuttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .profile-userbuttons .btn:last-child {
+      margin-right: 0px;
+    }
+        
+    .profile-usermenu {
+      margin-top: 0px;
+    }
+    
+    .profile-usermenu ul li {
+      border-bottom: 1px solid #f0f4f7;
+    }
+    
+    .profile-usermenu ul li:last-child {
+      border-bottom: none;
+    }
+    
+    .profile-usermenu ul li a {
+      color: #93a3b5;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    
+    .profile-usermenu ul li a i {
+      margin-right: 8px;
+      font-size: 14px;
+    }
+    
+    .profile-usermenu ul li a:hover {
+      background-color: #fafcfd;
+      color: #5b9bd1;
+    }
+    
+    .profile-usermenu ul li.active {
+      border-bottom: none;
+    }
+    
+    .profile-usermenu ul li.active a {
+      color: #5b9bd1;
+      background-color: #f6f9fb;
+      border-left: 2px solid #5b9bd1;
+      margin-left: -2px;
+    }
+    
+    /* Profile Content */
+    .profile-content {  
+      background: #fff;
+      min-height: 340px;
+    }
+  
+    .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      align-content: center;
+    }
+    
+    .btn {
+      border: 2px solid gray;
+      color: gray;
+      background-color: white;
+      padding: 5px 20px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    
+    .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+    
+    .limitador{
+      max-width: 266px;
+      max-height: 266px;
+      min-width: 255px;
+      min-height: 255px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 6em
+    }
+
+}
+
+/*
+==================================
+My front-end HTML
+==================================
+*/
+
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+	<meta charset="UTF-8">
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="css/style-Perfil.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<nav>
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn"><i class="glyphicon glyphicon-align-justify"></i></button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="Perfil.html">
+					<i class="glyphicon glyphicon-user"></i>
+					Perfil
+				</a>
+				<a href="Consultar-Livros.html">
+					<i class="glyphicon glyphicon-search"></i>
+					Consultar Livros
+				</a>
+				<a href="Lista-De-livros.html">
+					<i class="glyphicon glyphicon-book"></i>
+					Lista de Livros
+				</a>
+				<a href="Home.html">
+					<i class="glyphicon glyphicon-off"></i>
+					Sair
+				</a>
+			</div>
+		</div>
+		<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function (event) {
+				if (!event.target.matches('.dropbtn')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+						if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						}
+					}
+				}
+			}
+		</script>
+</nav>
+<div class="">
+	<div class="col-3">
+		<div class="profile-sidebar">
+			<!-- SIDEBAR USERPIC -->
+			<div class="profile-userpic">
+				<br>
+				<div class="text-center">
+					<img src="images/BookUserM.png" class="avatar img-circle img-thumbnail limitador" alt="avatar">
+					<h6>Escolha uma foto diferente</h6>
+					<input type="file" class="btn text-center center-block file-upload">
+				</div>
+				</hr>
+				<script>
+					$(document).ready(function () {
+
+
+						var readURL = function (input) {
+							if (input.files && input.files[0]) {
+								var reader = new FileReader();
+
+								reader.onload = function (e) {
+									$('.avatar').attr('src', e.target.result);
+								}
+
+								reader.readAsDataURL(input.files[0]);
+							}
+						}
+
+
+						$(".file-upload").on('change', function () {
+							readURL(this);
+						});
+					});
+				</script>
+			</div>
+			<!-- END SIDEBAR USERPIC -->
+			<!-- SIDEBAR USER TITLE -->
+			<div class=" profile-usertitle">
+				<div class="profile-usertitle-name">
+					Vinicius
+				</div>
+				<div class="profile-usertitle-job">
+					Scrum Master
+				</div>
+			</div>
+			<!-- END SIDEBAR USER TITLE -->
+			<!-- SIDEBAR BUTTONS -->
+			<div class="profile-userbuttons">
+				<button type="button" class="btn btn-lg btn-success"><i class="glyphicon glyphicon-comment"></i> Mensagem</button>
+			</div>
+			<!-- END SIDEBAR BUTTONS -->
+			<!-- SIDEBAR MENU -->
+			<!-- END MENU -->
+		</div>
+	</div>
+	<div class="col-9">
+		<div class="profile-content">
+			<form class="form" action="##" method="post" id="registrationForm">
+				<div class="form-group">
+					<div class="col-xs-6">
+						<label for="first_name">
+							<h4>Nome</h4>
+						</label>
+						<input type="text" class="form-control" name="first_name" id="first_name" placeholder="Ex.: Victor"
+							title="enter your first name if any.">
+					</div>
+				</div>
+				<div class="form-group">
+
+					<div class="col-xs-6">
+						<label for="last_name">
+							<h4>Sobrenome</h4>
+						</label>
+						<input type="text" class="form-control" name="last_name" id="last_name" placeholder="Ex.: Del Vecchio"
+							title="enter your last name if any.">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-6">
+						<label for="mobile">
+							<h4>Mobile</h4>
+						</label>
+						<input type="text" class="form-control" name="mobile" id="mobile" placeholder="(99) 99999-9999"
+							title="enter your mobile number if any.">
+					</div>
+				</div>
+				<div class="form-group">
+
+					<div class="col-xs-6">
+						<label for="email">
+							<h4>Email</h4>
+						</label>
+						<input type="email" class="form-control" name="email" id="email" placeholder="voce@email.com"
+							title="enter your email.">
+					</div>
+				</div>
+				<div class="form-group">
+
+					<div class="col-xs-6">
+						<label for="password">
+							<h4>Password</h4>
+						</label>
+						<input type="password" class="form-control" name="password" id="password" placeholder="Senha123"
+							title="enter your password.">
+					</div>
+				</div>
+				<div class="form-group">
+
+					<div class="col-xs-6">
+						<label for="password2">
+							<h4>Verify</h4>
+						</label>
+						<input type="password" class="form-control" name="password2" id="password2" placeholder="Senha123"
+							title="enter your password2.">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-12">
+						<br>
+						<button class="btn btn-lg btn-success pull-right" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Salvar</button>
+						<!--<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>-->
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<br>
